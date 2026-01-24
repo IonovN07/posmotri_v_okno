@@ -118,6 +118,16 @@ ol {
   width: 225px;
 }
 
+.search-form__textfield:focus {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.search-form__textfield:active {
+  outline: 1px solid transparent;
+  border: 1px solid #fff;
+}
+
 .search-form__checkbox-list {
   display: inline-flex;
   gap: 15px;
@@ -136,8 +146,7 @@ ol {
 
 .search-form__submit-button {
   letter-spacing: 0.0005em;
-  
-  margin-top: 20px;
+  align-self: flex-end;
   width: 194px;
   height: 34px;
 }
@@ -177,6 +186,10 @@ ol {
 
 .content__list-item:not(:last-of-type) {
   margin-block-end: 30px;
+}
+
+.content__list-item:active {
+  background-color: #545050;
 }
 
 .content__card-link {
@@ -230,6 +243,11 @@ ol {
   background-color: transparent;
   cursor: pointer;
   letter-spacing: -0.07em;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #545050;
 }
 
 .more-button {
