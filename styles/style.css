@@ -178,23 +178,26 @@ ol {
   position: relative;
   height: 298px;
   overflow-y: scroll;
-  padding-right: 2px;}
-/* }::-webkit-scrollbar {
-  width: 3px;  
-  background: #282626;  
-} */
+  padding-right: 2px;
+}
 
 .content__list-item:not(:last-of-type) {
   margin-block-end: 30px;
 }
 
-.content__list-item:active {
-  background-color: #545050;
-}
-
 .content__card-link {
   text-decoration: none;
   color: #fff;
+}
+
+.content__list-item:hover {
+  text-decoration: underline solid #fff 1px;
+  text-underline-offset: 3px;
+  text-decoration-skip-ink: none;
+}
+
+.content__list-item:active {
+  background-color: #545050;
 }
 
 .content__video-card {
@@ -230,7 +233,7 @@ ol {
   width: 193px;
   height: 103px;
   inset: 0;
-  object-fit: contain;
+  object-fit: cover;
   object-position: right;
 }
 
