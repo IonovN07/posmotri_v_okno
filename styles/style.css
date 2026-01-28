@@ -184,6 +184,25 @@ ol {
   cursor: pointer;
 }
 
+/* .search-form__label:active {
+  outline: none;
+  text-decoration: none;
+} */
+
+.search-form__label:active {
+  outline: none;
+}
+
+/* Убираем подчеркивание у текста при активном состоянии */
+.search-form__label:active .search-form__label-text {
+  text-decoration: none;
+}
+
+/* На всякий случай убираем обводку у псевдо-чекбокса */
+.search-form__label:active .search-form__pseudo-checkbox {
+  outline: none;
+}
+
 .search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
   content: '';
   display: block;
