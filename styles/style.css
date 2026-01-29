@@ -18,7 +18,6 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  
 }
 
 h1,
@@ -48,7 +47,7 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
-} 
+}
 
 .button {
   border: 1px solid #fff;
@@ -57,7 +56,6 @@ ol {
   text-align: center;
   color: #fff;
   background-color: transparent;
-  cursor: pointer;
   letter-spacing: -0.07em;
   cursor: pointer;
   user-select: none;
@@ -84,8 +82,8 @@ ol {
   display: grid;
   grid-template-columns: 711px 399px;
   gap: 30px;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   padding: 133px 30px;
 }
 
@@ -105,15 +103,15 @@ ol {
   inset: 0;
   object-fit: cover;
   object-position: center;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .search-form {
   display: flex;
   align-items: start;
   gap: 40px;
-  width: 100%;
+  inline-size: 100%;
 }
 
 .search-form__fieldset {
@@ -124,27 +122,27 @@ ol {
   font-weight: 400;
   font-size: 18px;
   color: #fff;
-  margin-bottom: 6px;
+  margin-block-end: 6px;
 }
 
 .search-form__label {
   display: flex;
   align-items: center;
-  width: fit-content;
+  inline-size: fit-content;
 }
 
 .search-form__textfield {
   appearance: none;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #fff;
-  border-top: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+  border-block-start: 1px solid #fff;
   font-weight: 400;
   font-size: 18px;
-  color: rgba(255, 255, 255, 0.7);
-  padding-bottom: 2px;
+  color: rgb(255 255 255/ 0.7);
+  padding-block-end: 2px;
   letter-spacing: -0.05em;
-  width: 225px;
+  inline-size: 225px;
 }
 
 .search-form__textfield:focus {
@@ -158,8 +156,7 @@ ol {
 
 .search-form__label:active {
   outline: 1px solid #fff;
-  outline-offset: 0px;
-  border: none;
+  outline-offset: 0;
 }
 
 .search-form__checkbox-list {
@@ -170,10 +167,10 @@ ol {
 .search-form__pseudo-checkbox {
   display: inline-block;
   position: relative;
-  margin-right: 5px;
+  margin-inline-end: 5px;
   vertical-align: middle;
-  width: 19px;
-  height: 19px;
+  inline-size: 19px;
+  block-size: 19px;
   border: 1px solid #fff;
 }
 
@@ -181,52 +178,43 @@ ol {
   text-decoration: underline solid #fff 1px;
   text-underline-offset: 3px;
   text-decoration-skip-ink: none;
+}
+
+.search-form__label:hover {
   cursor: pointer;
 }
 
-/* .search-form__label:active {
-  outline: none;
-  text-decoration: none;
-} */
-
-.search-form__label:active {
+.search-form__label:has(input[name="time"]):active {
   outline: none;
 }
 
-/* Убираем подчеркивание у текста при активном состоянии */
 .search-form__label:active .search-form__label-text {
   text-decoration: none;
-}
-
-/* На всякий случай убираем обводку у псевдо-чекбокса */
-.search-form__label:active .search-form__pseudo-checkbox {
-  outline: none;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
   content: '';
   display: block;
   position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 15px;
-  height: 15px;
+  inset-inline-start: 1px;
+  inset-block-start: 1px;
+  inline-size: 15px;
+  block-size: 15px;
   background-color: #fff;
 }
 
 .search-form__submit-button {
-  letter-spacing: 0.0005em;
   align-self: flex-end;
-  width: 194px;
-  height: 34px;
+  inline-size: 194px;
+  block-size: 34px;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
   row-gap: 26px;
-  width: 100%;
-  height: 534px;
+  inline-size: 100%;
+  block-size: 534px;
 }
 
 .title {
@@ -243,9 +231,10 @@ ol {
 }
 
 .content__list {
-  height: 298px;
+  position: relative;
+  block-size: 298px;
   overflow-y: scroll;
-  padding-right: 3px;
+  padding-inline-end: 3px;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -309,14 +298,14 @@ ol {
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+  inline-size: 194px;
+  block-size: 103px;
   inset: 0;
   object-fit: cover;
   object-position: center;
 }
 
 .more-button {
-  width: 399px;
-  height: 34px;
+  inline-size: 399px;
+  block-size: 34px;
 }

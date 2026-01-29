@@ -1,0 +1,27 @@
+{
+  "name": "posmotri_v_okno",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/IonovN07/posmotri_v_okno#readme",
+  "bugs": {
+    "url": "https://github.com/IonovN07/posmotri_v_okno/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IonovN07/posmotri_v_okno.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'",
+    "lint": "stylelint **/*.css",
+    "lintfix": "stylelint **/*.css --fix"
+  },
+  "dependencies": {
+    "prettier": "^3.8.1",
+    "stylelint": "^17.0.0"
+  }
+}
