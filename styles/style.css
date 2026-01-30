@@ -11,13 +11,13 @@ html {
 .page {
   display: grid;
   place-items: center;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -41,22 +41,22 @@ ol {
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
 
 .button {
   border: 1px solid #fff;
+  color: #fff;
   font-weight: 700;
   font-size: 18px;
-  text-align: center;
-  color: #fff;
-  background-color: transparent;
   letter-spacing: -0.07em;
+  text-align: center;
+  background-color: transparent;
   cursor: pointer;
   user-select: none;
 }
@@ -82,9 +82,9 @@ ol {
   display: grid;
   grid-template-columns: 711px 399px;
   gap: 30px;
+  padding: 133px 30px;
   inline-size: 100%;
   block-size: 100%;
-  padding: 133px 30px;
 }
 
 .result {
@@ -93,9 +93,9 @@ ol {
 
 .result__video-container {
   position: relative;
+  margin-block-end: 16px;
   inline-size: 100%;
   block-size: 386px;
-  margin-block-end: 16px;
 }
 
 .result__video {
@@ -119,10 +119,10 @@ ol {
 }
 
 .search-form__fieldset-title {
+  margin-block-end: 6px;
+  color: #fff;
   font-weight: 400;
   font-size: 18px;
-  color: #fff;
-  margin-block-end: 6px;
 }
 
 .search-form__label {
@@ -132,16 +132,16 @@ ol {
 }
 
 .search-form__textfield {
-  appearance: none;
   border: none;
-  background-color: transparent;
-  border-block-end: 1px solid #fff;
   border-block-start: 1px solid #fff;
+  border-block-end: 1px solid #fff;
+  padding-block-end: 2px;
+  color: rgb(255 255 255/ 0.7);
   font-weight: 400;
   font-size: 18px;
-  color: rgb(255 255 255/ 0.7);
-  padding-block-end: 2px;
   letter-spacing: -0.05em;
+  background-color: transparent;
+  appearance: none;
   inline-size: 225px;
 }
 
@@ -165,19 +165,19 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  display: inline-block;
   position: relative;
+  display: inline-block;
   margin-inline-end: 5px;
+  border: 1px solid #fff;
   vertical-align: middle;
   inline-size: 19px;
   block-size: 19px;
-  border: 1px solid #fff;
 }
 
 .search-form__label:hover .search-form__label-text {
   text-decoration: underline solid #fff 1px;
-  text-underline-offset: 3px;
   text-decoration-skip-ink: none;
+  text-underline-offset: 3px;
 }
 
 .search-form__label:hover {
@@ -194,13 +194,13 @@ ol {
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
   content: '';
-  display: block;
   position: absolute;
+  display: block;
+  background-color: #fff;
   inset-inline-start: 1px;
   inset-block-start: 1px;
   inline-size: 15px;
   block-size: 15px;
-  background-color: #fff;
 }
 
 .search-form__submit-button {
@@ -218,12 +218,12 @@ ol {
 }
 
 .title {
+  color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
   text-transform: uppercase;
-  color: #fff;
 }
 
 .content__accent {
@@ -232,9 +232,9 @@ ol {
 
 .content__list {
   position: relative;
-  block-size: 298px;
-  overflow-y: scroll;
   padding-inline-end: 3px;
+  overflow-y: scroll;
+  block-size: 298px;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -243,9 +243,9 @@ ol {
 
 .content__card-link {
   display: block;
-  text-decoration: none;
-  color: #fff;
   margin: 2px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .content__card-link:focus {
@@ -258,8 +258,8 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline solid #fff 1px;
-  text-underline-offset: 3px;
   text-decoration-skip-ink: none;
+  text-underline-offset: 3px;
 }
 
 .content__card-link_current,
@@ -275,34 +275,34 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
-  hyphens: auto;
   margin-inline-start: 1px;
+  hyphens: auto;
 }
 
 .content__video-card-title {
+  margin-block-start: 2px;
+  color: #fff;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 100%;
   text-transform: uppercase;
-  color: #fff;
-  margin-block-start: 2px;
 }
 
 .content__video-card-description {
+  margin-block-start: 5px;
+  color: #fff;
   font-weight: 400;
   font-size: 18px;
   line-height: 90%;
-  color: #fff;
-  margin-block-start: 5px;
 }
 
 .content__video-card-thumbnail {
-  inline-size: 194px;
-  block-size: 103px;
   inset: 0;
   object-fit: cover;
   object-position: center;
+  inline-size: 194px;
+  block-size: 103px;
 }
 
 .more-button {
